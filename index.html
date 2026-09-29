@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pratik Singh — AI/ML Engineer</title>
+<meta name="description" content="Pratik Singh — Aspiring AI/ML Engineer. Generative AI, RAG pipelines, multi-agent LLM systems, machine learning and BI dashboards.">
+<meta property="og:title" content="Pratik Singh — AI/ML Engineer">
+<meta property="og:description" content="RAG pipelines, multi-agent LLM systems, ML models and BI dashboards — built end to end.">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/220500144?v=4">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232563eb'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='28' fill='white'>PS</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --bg-alt:#f6f8fb; --surface:#ffffff; --border:#e4e8ef;
+  --text:#0f172a; --muted:#526077; --accent:#2563eb; --accent-soft:#e8efff;
+  --shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b1020; --bg-alt:#0f1629; --surface:#131b31; --border:#232d47;
+    --text:#e6ebf5; --muted:#98a3ba; --accent:#6ea0ff; --accent-soft:#1a2748;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b1020; --bg-alt:#0f1629; --surface:#131b31; --border:#232d47;
+  --text:#e6ebf5; --muted:#98a3ba; --accent:#6ea0ff; --accent-soft:#1a2748;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;letter-spacing:-.02em;font-size:1.1rem}
+.brand span{color:var(--accent)}
+.links{display:flex;gap:24px;align-items:center;font-size:.92rem;color:var(--muted)}
+.links a:hover{color:var(--text)}
+.icon-btn{width:36px;height:36px;border-radius:10px;border:1px solid var(--border);background:var(--surface);color:var(--text);display:grid;place-items:center;cursor:pointer}
+.menu-btn{display:none}
+@media (max-width:760px){
+  .links{position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--border);display:none}
+  .links.open{display:flex}
+  .links a{padding:14px 20px;width:100%;border-top:1px solid var(--border)}
+  .menu-btn{display:grid}
+}
+
+/* hero */
+.hero{padding:88px 0 72px}
+.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;color:var(--accent);background:var(--accent-soft);padding:6px 12px;border-radius:999px;font-weight:600}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.2)}
+h1{font-size:clamp(2.3rem,5.5vw,3.6rem);line-height:1.08;letter-spacing:-.035em;font-weight:800;margin:20px 0 16px}
+h1 .accent{color:var(--accent)}
+.lead{font-size:1.1rem;color:var(--muted);max-width:560px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:10px;font-weight:600;font-size:.95rem;border:1px solid var(--border);background:var(--surface);transition:transform .15s,border-color .15s}
+.btn:hover{transform:translateY(-1px);border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.socials{display:flex;gap:10px;margin-top:28px}
+.socials a{width:40px;height:40px;border-radius:10px;border:1px solid var(--border);display:grid;place-items:center;color:var(--muted);background:var(--surface)}
+.socials a:hover{color:var(--accent);border-color:var(--accent)}
+.avatar-card{position:relative;justify-self:center}
+.avatar-card img{width:280px;height:280px;border-radius:24px;object-fit:cover;border:1px solid var(--border);box-shadow:var(--shadow)}
+.avatar-card::before{content:"";position:absolute;inset:-14px;border-radius:30px;background:linear-gradient(135deg,var(--accent-soft),transparent 60%);z-index:-1}
+.badge{position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow);padding:8px 14px;border-radius:12px;font-size:.82rem;font-weight:600}
+@media (max-width:860px){
+  .hero{padding:56px 0}
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .avatar-card{order:-1;justify-self:start}
+  .avatar-card img{width:128px;height:128px;border-radius:20px}
+  .avatar-card::before,.badge{display:none}
+}
+
+/* sections */
+section{padding:80px 0}
+section.alt{background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.sec-head{margin-bottom:40px}
+.sec-label{font-size:.8rem;color:var(--accent);font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+h2{font-size:clamp(1.7rem,3.5vw,2.2rem);letter-spacing:-.03em;font-weight:800;margin-top:6px}
+.sec-head p{color:var(--muted);margin-top:8px;max-width:620px}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
+.about-grid p{color:var(--muted);margin-bottom:14px;font-size:1.02rem}
+.about-grid p strong{color:var(--text)}
+.facts{display:grid;gap:12px}
+.fact{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 18px}
+.fact .k{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.fact .v{font-weight:600;margin-top:2px}
+@media (max-width:760px){.about-grid{grid-template-columns:1fr}}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.skill{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px}
+.skill h3{font-size:1rem;display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.skill h3 .ic{width:32px;height:32px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:.8rem;padding:4px 10px;border-radius:999px;background:var(--bg-alt);border:1px solid var(--border);color:var(--muted)}
+
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:26px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--accent) 40%,var(--border))}
+.card .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.card .kind{font-size:.75rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.card h3{font-size:1.2rem;letter-spacing:-.02em;margin:6px 0 10px}
+.card p{color:var(--muted);font-size:.95rem;flex:1}
+.card ul{color:var(--muted);font-size:.93rem;padding-left:18px;margin:4px 0 0;flex:1}
+.card ul li{margin-bottom:4px}
+.card .tags{margin-top:18px}
+.card .actions{display:flex;gap:10px;margin-top:20px}
+.card .actions a{font-size:.88rem;font-weight:600;display:inline-flex;align-items:center;gap:6px;color:var(--accent)}
+.card .actions a:hover{text-decoration:underline}
+.gh-ic{color:var(--muted)}
+.card:hover .gh-ic{color:var(--accent)}
+@media (max-width:760px){.projects{grid-template-columns:1fr}}
+
+.more-head{margin:56px 0 18px;font-size:1.1rem;font-weight:700}
+.mini-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.mini{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:6px;transition:border-color .2s}
+.mini:hover{border-color:var(--accent)}
+.mini .t{font-weight:600;display:flex;justify-content:space-between;gap:10px}
+.mini .t svg{flex-shrink:0;color:var(--muted)}
+.mini p{font-size:.88rem;color:var(--muted)}
+.mini .meta{font-size:.78rem;color:var(--muted);margin-top:auto;padding-top:6px}
+@media (max-width:400px){.mini-grid{grid-template-columns:1fr}}
+
+/* education & certs */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+.timeline{display:grid;gap:16px}
+.tl{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px;border-left:3px solid var(--accent)}
+.tl .when{font-size:.82rem;color:var(--muted)}
+.tl h3{font-size:1.05rem;margin:4px 0 2px}
+.tl .where{color:var(--muted);font-size:.93rem}
+.status{display:inline-block;font-size:.75rem;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--accent-soft);color:var(--accent);margin-top:10px}
+.cert{display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px}
+.cert .ic{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;flex-shrink:0}
+.cert h3{font-size:1rem}
+.cert .by{font-size:.85rem;color:var(--muted)}
+.cert a.verify{margin-left:auto;font-size:.85rem;font-weight:600;color:var(--accent);white-space:nowrap}
+.col-title{font-size:1.05rem;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+
+/* contact */
+.contact{text-align:center;max-width:640px;margin:0 auto}
+.contact p{color:var(--muted);margin:12px 0 28px;font-size:1.05rem}
+.contact .cta{justify-content:center}
+footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted);font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#top" class="brand">Pratik<span>.</span>Singh</a>
+      <div class="links" id="links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="icon-btn" id="theme" aria-label="Toggle dark mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menu" aria-label="Open menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>Open to entry-level AI/ML roles</span>
+        <h1>Hi, I'm Pratik Singh.<br><span class="accent">I build AI systems</span> end to end.</h1>
+        <p class="lead">Aspiring AI/ML Engineer with a BSc in Data Science. I build and ship RAG pipelines, multi-agent LLM systems, recommendation engines and BI dashboards using Python, LangChain/LangGraph and modern data tooling.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">View projects
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn" href="Pratik_Singh_Resume.pdf" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Download resume</a>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/pratiksinghds" target="_blank" rel="noopener" aria-label="GitHub"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a>
+          <a href="https://www.linkedin.com/in/pratiksingh-ds-aiml" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+          <a href="mailto:prxt1ksngh@gmail.com" aria-label="Email"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
+        </div>
+      </div>
+      <div class="avatar-card">
+        <img src="https://avatars.githubusercontent.com/u/220500144?v=4" alt="Pratik Singh" width="280" height="280">
+        <div class="badge">📍 Noida / Delhi, India</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="alt">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-label">About</div>
+        <h2>Data science background, product mindset</h2>
+      </div>
+      <div class="about-grid">
+        <div class="reveal">
+          <p>I'm an aspiring <strong>AI/ML Engineer</strong> with a <strong>BSc in Data Science</strong> from IIMT University and an ongoing <strong>MBA in Aviation Management</strong> with specializations in Business Management and Data &amp; AI.</p>
+          <p>I like taking ideas all the way from notebook to working application — whether that's a <strong>medical RAG assistant</strong> that cites its sources, an <strong>autonomous multi-agent travel planner</strong> built on LangGraph, or a recommendation engine deployed on Streamlit.</p>
+          <p>The business side of my MBA helps me frame ML work around real outcomes, not just model metrics. I'm looking for an entry-level AI/ML Engineer role where I can apply ML and software engineering in production.</p>
+        </div>
+        <div class="facts reveal">
+          <div class="fact"><div class="k">Focus</div><div class="v">Generative AI · LLM Engineering · Applied ML</div></div>
+          <div class="fact"><div class="k">Education</div><div class="v">BSc Data Science · MBA (in progress)</div></div>
+          <div class="fact"><div class="k">Certifications</div><div class="v">3 × E&amp;ICT Academy, IIT Kanpur</div></div>
+          <div class="fact"><div class="k">Location</div><div class="v">Noida / Delhi, India</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-label">Skills</div>
+        <h2>Technical toolkit</h2>
+      </div>
+      <div class="skills">
+        <div class="skill reveal">
+          <h3><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></span>Languages &amp; Core</h3>
+          <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span></div>
+        </div>
+        <div class="skill reveal">
+          <h3><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></span>Machine Learning &amp; DS</h3>
+          <div class="tags"><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">TensorFlow / Keras</span><span class="tag">Deep Learning</span></div>
+        </div>
+        <div class="skill reveal">
+          <h3><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8L20 10l-5 3.6L16.5 20 12 16.5 7.5 20 9 13.6 4 10l6.1-1.2z"/></svg></span>Generative AI &amp; LLMs</h3>
+          <div class="tags"><span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">RAG</span><span class="tag">FAISS</span><span class="tag">Google Gemini API</span><span class="tag">Groq API</span><span class="tag">Multi-agent systems</span></div>
+        </div>
+        <div class="skill reveal">
+          <h3><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg></span>Data &amp; BI</h3>
+          <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">PostgreSQL</span><span class="tag">Data cleaning</span><span class="tag">Visualization</span><span class="tag">EDA</span></div>
+        </div>
+        <div class="skill reveal">
+          <h3><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg></span>Tools &amp; Deployment</h3>
+          <div class="tags"><span class="tag">Streamlit</span><span class="tag">Git / GitHub</span><span class="tag">Linux</span><span class="tag">Jupyter Notebook</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="alt">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-label">Projects</div>
+        <h2>Featured work</h2>
+        <p>End-to-end builds across generative AI, machine learning and business intelligence. Every project links to its source code.</p>
+      </div>
+
+      <div class="projects">
+        <article class="card reveal">
+          <div class="top"><div><div class="kind">Generative AI · RAG</div><h3>Medical RAG Chatbot</h3></div>
+            <a href="https://github.com/pratiksinghds/medical-rag-chatbot" target="_blank" rel="noopener" aria-label="Source on GitHub" class="gh-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a></div>
+          <ul>
+            <li>Domain-specific medical Q&amp;A assistant built end to end.</li>
+            <li>Retrieves from a FAISS vector index and cites verifiable sources for every answer.</li>
+            <li>Designed to reduce hallucinated answers in a sensitive-information domain.</li>
+          </ul>
+          <div class="tags"><span class="tag">LangChain</span><span class="tag">Google Gemini</span><span class="tag">FAISS</span><span class="tag">Streamlit</span></div>
+          <div class="actions"><a href="https://github.com/pratiksinghds/medical-rag-chatbot" target="_blank" rel="noopener">View code →</a></div>
+        </article>
+
+        <article class="card reveal">
+          <div class="top"><div><div class="kind">Agentic AI · LangGraph</div><h3>Multi-Agent Travel Planning System</h3></div>
+            <a href="https://github.com/pratiksinghds/multi-agent-travel-system" target="_blank" rel="noopener" aria-label="Source on GitHub" class="gh-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a></div>
+          <ul>
+            <li>Autonomous multi-agent planner that produces structured, budget-aware itineraries.</li>
+            <li>PostgreSQL-backed session checkpointing for persistent, resumable conversations.</li>
+            <li>Integrates real-time AviationStack flight data and Tavily web search via a Streamlit UI.</li>
+          </ul>
+          <div class="tags"><span class="tag">LangGraph</span><span class="tag">Groq</span><span class="tag">PostgreSQL</span><span class="tag">Tavily</span><span class="tag">Streamlit</span></div>
+          <div class="actions"><a href="https://github.com/pratiksinghds/multi-agent-travel-system" target="_blank" rel="noopener">View code →</a></div>
+        </article>
+
+        <article class="card reveal">
+          <div class="top"><div><div class="kind">Machine Learning · RecSys</div><h3>Book Recommender System</h3></div>
+            <a href="https://github.com/pratiksinghds/book-recommender-system" target="_blank" rel="noopener" aria-label="Source on GitHub" class="gh-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a></div>
+          <ul>
+            <li>End-to-end collaborative filtering recommendation engine.</li>
+            <li>Nearest Neighbors model over a user–book rating matrix.</li>
+            <li>Deployed as an interactive Streamlit web application.</li>
+          </ul>
+          <div class="tags"><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">Streamlit</span></div>
+          <div class="actions"><a href="https://github.com/pratiksinghds/book-recommender-system" target="_blank" rel="noopener">View code →</a></div>
+        </article>
+
+        <article class="card reveal">
+          <div class="top"><div><div class="kind">Business Intelligence</div><h3>Bank Data Analysis Dashboard</h3></div>
+            <a href="https://github.com/pratiksinghds/Bank-Data-Analysis-Power-BI" target="_blank" rel="noopener" aria-label="Source on GitHub" class="gh-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a></div>
+          <ul>
+            <li>Complete analysis workflow on real-world banking data: cleaning, transformation, visualization.</li>
+            <li>DAX measures for Total Loan, Total Deposit, Business Lending and Credit Card Balances.</li>
+            <li>Surfaces portfolio composition and key banking KPIs in an interactive dashboard.</li>
+          </ul>
+          <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Python</span></div>
+          <div class="actions"><a href="https://github.com/pratiksinghds/Bank-Data-Analysis-Power-BI" target="_blank" rel="noopener">View code →</a></div>
+        </article>
+      </div>
+
+      <div class="more-head reveal">More machine learning projects</div>
+      <div class="mini-grid">
+        <a class="mini reveal" href="https://github.com/pratiksinghds/customer-churn-ann" target="_blank" rel="noopener">
+          <div class="t">Customer Churn Prediction (ANN)<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <p>Multi-layer perceptron in TensorFlow/Keras with one-hot encoding, scaling, dropout and early stopping.</p>
+          <div class="meta mono">TensorFlow · Keras · Deep Learning</div>
+        </a>
+        <a class="mini reveal" href="https://github.com/pratiksinghds/clustering-algorithms-in-python" target="_blank" rel="noopener">
+          <div class="t">Clustering Algorithms Study<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <p>Hands-on comparison of K-Means, Hierarchical (Agglomerative) and DBSCAN clustering.</p>
+          <div class="meta mono">Unsupervised · Scikit-learn</div>
+        </a>
+        <a class="mini reveal" href="https://github.com/pratiksinghds/House-Prices---Data-Analysis-Exploration" target="_blank" rel="noopener">
+          <div class="t">House Prices — EDA<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <p>In-depth exploratory analysis of housing features, statistical patterns and missing values.</p>
+          <div class="meta mono">Pandas · Seaborn · EDA</div>
+        </a>
+        <a class="mini reveal" href="https://github.com/pratiksinghds/california-housing-price-prediction" target="_blank" rel="noopener">
+          <div class="t">California Housing Price Prediction<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <p>Linear regression model predicting median house values across California districts.</p>
+          <div class="meta mono">Regression · Scikit-learn</div>
+        </a>
+        <a class="mini reveal" href="https://github.com/pratiksinghds/titanic-survival-prediction" target="_blank" rel="noopener">
+          <div class="t">Titanic Survival Prediction<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <p>End-to-end ML pipeline on the Kaggle Titanic dataset to predict passenger survival.</p>
+          <div class="meta mono">Classification · Kaggle</div>
+        </a>
+        <a class="mini reveal" href="https://github.com/pratiksinghds/iris-logistic-regression" target="_blank" rel="noopener">
+          <div class="t">Iris Logistic Regression<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <p>Binary classification on the Iris dataset with Scikit-learn logistic regression.</p>
+          <div class="meta mono">Classification · Scikit-learn</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTS -->
+  <section id="education">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="sec-label">Education &amp; Certifications</div>
+        <h2>Learning path</h2>
+      </div>
+      <div class="two">
+        <div>
+          <div class="col-title reveal">🎓 Education</div>
+          <div class="timeline">
+            <div class="tl reveal">
+              <div class="when">In progress · First year completed</div>
+              <h3>MBA — Aviation Management</h3>
+              <div class="where">Specializations: Business Management, Data &amp; AI</div>
+              <span class="status">Ongoing</span>
+            </div>
+            <div class="tl reveal">
+              <div class="when">2022 – 2025</div>
+              <h3>BSc — Data Science</h3>
+              <div class="where">IIMT University, Meerut</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="col-title reveal">📜 Certifications</div>
+          <div class="timeline">
+            <!-- To add a verification link, add: <a class="verify" href="CERT_URL" target="_blank" rel="noopener">Verify →</a> inside the .cert div -->
+            <div class="cert reveal">
+              <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg></div>
+              <div><h3>Machine Learning</h3><div class="by">E&amp;ICT Academy, IIT Kanpur · MeitY initiative</div></div>
+            </div>
+            <div class="cert reveal">
+              <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg></div>
+              <div><h3>Data Science</h3><div class="by">E&amp;ICT Academy, IIT Kanpur · MeitY initiative</div></div>
+            </div>
+            <div class="cert reveal">
+              <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg></div>
+              <div><h3>Linux</h3><div class="by">E&amp;ICT Academy, IIT Kanpur · MeitY initiative</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="alt">
+    <div class="wrap contact reveal">
+      <div class="sec-label">Contact</div>
+      <h2>Let's work together</h2>
+      <p>I'm actively looking for entry-level AI/ML Engineer opportunities. The fastest way to reach me is email — I usually reply within a day.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:prxt1ksngh@gmail.com">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>prxt1ksngh@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/pratiksingh-ds-aiml" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/pratiksinghds" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Pratik Singh</span>
+    <span>Built with HTML &amp; CSS · Hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('theme');
+  try{var s=localStorage.getItem('theme'); if(s) root.setAttribute('data-theme',s);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+  var links=document.getElementById('links');
+  document.getElementById('menu').addEventListener('click',function(){links.classList.toggle('open');});
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');});});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
