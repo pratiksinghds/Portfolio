@@ -127,6 +127,9 @@ h2{font-size:clamp(1.7rem,3.5vw,2.2rem);letter-spacing:-.03em;font-weight:800;ma
 .card .actions{display:flex;gap:10px;margin-top:20px}
 .card .actions a{font-size:.88rem;font-weight:600;display:inline-flex;align-items:center;gap:6px;color:var(--accent)}
 .card .actions a:hover{text-decoration:underline}
+.card .actions{align-items:center;gap:18px}
+.card .actions a.demo{background:var(--accent);color:#fff;padding:8px 14px;border-radius:8px}
+.card .actions a.demo:hover{text-decoration:none;filter:brightness(1.08)}
 .gh-ic{color:var(--muted)}
 .card:hover .gh-ic{color:var(--accent)}
 @media (max-width:760px){.projects{grid-template-columns:1fr}}
@@ -282,7 +285,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <div class="sec-head reveal">
         <div class="sec-label">Projects</div>
         <h2>Featured work</h2>
-        <p>End-to-end builds across generative AI, machine learning and business intelligence. Every project links to its source code.</p>
+        <p>End-to-end builds across generative AI, machine learning and business intelligence. Every project links to its source code, and the AI and ML apps have live demos you can try in your browser.</p>
       </div>
 
       <div class="projects">
@@ -295,7 +298,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
             <li>Designed to reduce hallucinated answers in a sensitive-information domain.</li>
           </ul>
           <div class="tags"><span class="tag">LangChain</span><span class="tag">Groq</span><span class="tag">FAISS</span><span class="tag">Hugging Face</span><span class="tag">Streamlit</span></div>
-          <div class="actions"><a href="https://github.com/pratiksinghds/medical-rag-chatbot" target="_blank" rel="noopener">View code →</a></div>
+          <div class="actions"><a class="demo" href="https://pratik-medical-rag.streamlit.app/" target="_blank" rel="noopener"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg>Live demo</a><a href="https://github.com/pratiksinghds/medical-rag-chatbot" target="_blank" rel="noopener">View code →</a></div>
         </article>
 
         <article class="card reveal">
@@ -307,7 +310,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
             <li>Integrates real-time AviationStack flight data and Tavily web search via a Streamlit UI.</li>
           </ul>
           <div class="tags"><span class="tag">LangGraph</span><span class="tag">Groq</span><span class="tag">PostgreSQL</span><span class="tag">Tavily</span><span class="tag">Streamlit</span></div>
-          <div class="actions"><a href="https://github.com/pratiksinghds/multi-agent-travel-system" target="_blank" rel="noopener">View code →</a></div>
+          <div class="actions"><a class="demo" href="https://pratik-travel-planner.streamlit.app/" target="_blank" rel="noopener"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg>Live demo</a><a href="https://github.com/pratiksinghds/multi-agent-travel-system" target="_blank" rel="noopener">View code →</a></div>
         </article>
 
         <article class="card reveal">
@@ -319,7 +322,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
             <li>Deployed as an interactive Streamlit web application.</li>
           </ul>
           <div class="tags"><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">Streamlit</span></div>
-          <div class="actions"><a href="https://github.com/pratiksinghds/book-recommender-system" target="_blank" rel="noopener">View code →</a></div>
+          <div class="actions"><a class="demo" href="https://pratik-book-recommender.streamlit.app/" target="_blank" rel="noopener"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg>Live demo</a><a href="https://github.com/pratiksinghds/book-recommender-system" target="_blank" rel="noopener">View code →</a></div>
         </article>
 
         <article class="card reveal">
