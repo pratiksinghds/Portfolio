@@ -1,0 +1,25 @@
+name: Keep Streamlit demos awake
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"     # every 6 hours (UTC)
+  workflow_dispatch:            # "Run workflow" button in the Actions tab
+
+permissions:
+  contents: read
+
+jobs:
+  wake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Playwright
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Visit each live demo
+        run: python scripts/keep_awake.py
